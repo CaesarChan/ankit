@@ -2,6 +2,8 @@ package ankit
 
 import (
 	"bytes"
+	"fmt"
+	"strings"
 	"testing"
 )
 
@@ -36,4 +38,21 @@ func TestOneNoteReader(t *testing.T) {
 			t.Errorf("got %q, want %q", buf.String(), tt.csv)
 		}
 	}
+}
+
+func TestFileName(t *testing.T) {
+	path := "/Users/SM1701/caesar/LeetCode-Go/leetcode/0020.Two-Sum"
+
+	dirNames := strings.Split(path, "/")
+	lastDirName := dirNames[len(dirNames)-1]
+	fileName := strings.TrimLeft(lastDirName, "0")
+	fileName = strings.Replace(fileName, ".", ". ", -1)
+	questionName := strings.Replace(fileName, "-", " ", -1)
+	fmt.Println("fileName", questionName)
+}
+
+func TestTrimLeft(t *testing.T) {
+	s := "0001000200"
+	left := strings.TrimLeft(s, "0")
+	fmt.Println(left)
 }

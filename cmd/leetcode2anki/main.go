@@ -33,7 +33,8 @@ func question(path string, info os.FileInfo) (leetcode.Key, error) {
 		return nil, nil
 	}
 
-	id, err := strconv.Atoi(path)
+	pathArr := strings.Split(path, ".")
+	id, err := strconv.Atoi(pathArr[0])
 	if err != nil {
 		return nil, filepath.SkipDir
 	}
