@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/invzhi/ankit"
-	"github.com/invzhi/ankit/leetcode"
+	"ankit"
+	"ankit/leetcode"
 )
 
 var (

@@ -8,7 +8,7 @@ import (
 type MockNote []string
 
 func (m MockNote) Fields() []string {
-	return []string(m)
+	return m
 }
 
 func TestOneNoteReader(t *testing.T) {
